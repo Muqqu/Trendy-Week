@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cardo&family=Castoro&family=Crimson+Text:wght@700&family=Poppins:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/slick.css">
+    <link rel="stylesheet" href="./assets/css/slick-theme.css">
+    <link rel="stylesheet" href="./assets/scss/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header fixed-top w-100">
+            <div class="header-top">
+                <div class="container-fluid">
+                    <div class="header-top-slider">
+                        <div class="slick-slide">Free Shipping on all orders</div>
+                        <div class="slick-slide">Buy more save more</div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container d-block">
+                    <div class="d-flex justify-content-between align-items-center mb-lg-3">
+                        <div class="d-lg-block">
+                            <button class="navbar-toggler border-0 p-0 shadow-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <a class="navbar-brand" href="#"><img src="./assets/img/png/trendy-logo.png" alt=""></a>
+                        <div class="d-flex gap-3">
+                            <a href="" class="icon"><img src="./assets/img/png/search-icon.png" alt=""></a>
+                            <a class="icon" data-bs-toggle="offcanvas" href="#cartCanvas" role="button" aria-controls="cartCanvas"><img src="./assets/img/png/cart-ico.png" alt=""></a>
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">All Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Top Trends</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Track Your Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="main-content" style="margin-top: 183px;">
+            <section class="default-sec product-single-sec">
+                <div class="container">
+                    <div class="mb-4">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Pet food large for kittens</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="product-img-wrapper mb-3 mb-lg-4">
+                                <img src="./assets/img/webp/products/product-single-dummy.webp" alt=""
+                                    id="product-img-preview">
+                            </div>
+
+                            <div class="product-slider-nav">
+                                <div class="slider-item" color="blue">
+                                    <img src="./assets/img/webp/products/product-single-dummy.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="slider-item" color="white">
+                                    <img src="./assets/img/webp/products/product-single-dummy-2.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="slider-item" color="blue">
+                                    <img src="./assets/img/webp/products/product-single-dummy.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                                <div class="slider-item" color="blue">
+                                    <img src="./assets/img/webp/products/product-single-dummy.webp" alt=""
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 offset-lg-1">
+                            <h1 class="title mb-3 mt-3">Pet food large for kittens</h1>
+                            <div class="d-flex align-items-center gap-3 mb-4">
+                                <h3 class="price-title">554.00$</h3>
+                                <h4 class="price-title text-decoration-line-through text-muted">
+                                    786.00$</h4>
+                            </div>
+                            <div class="variation-wrapper mb-4">
+                                <h4 class="variation-title">Color</h4>
+                                <div class="d-flex align-items-center gap-3 flex-wrap">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="colorVariation1" value="blue" checked>
+                                        <label class="form-check-label" for="colorVariation1">
+                                            Blue
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios"
+                                            id="colorVariation2" value="white">
+                                        <label class="form-check-label" for="colorVariation2">
+                                            White
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="quantity-input input-group mb-3">
+                                <button type="button" onclick="decrementQuantity()" class="btn btn-primary">-</button>
+                                <input type="number" id="quantity" class="quantity form-control" name="quantity" min="1"
+                                    max="200" value="1" required="" data-id="4" data-productquantity="200">
+                                <button type="button" onclick="incrementQuantity()" class="btn btn-primary">+</button>
+                            </div>
+                            <p class="text-muted">Only 5% items left in stock</p>
+                            <div class="rounded-pill d-flex justify-content-start align-items-center gap-2 py-1 px-3 mb-3"
+                                style="background-color: #b8e986; max-width: fit-content;">
+                                <img src="./assets/img/png/eye-icon.png" alt="" style="width: 20px;">
+                                <p class="mb-0">
+                                    1120 visitors currently looking at this product
+                                </p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="./assets/img/png/globe-icon.png" alt="">
+                                <p class="mb-0">It's been recommended by 6.19K people on Facebook</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <img src="./assets/img/png/box-icon.png" alt="">
+                                <p class="mb-0">Free Shipping On All Orders</p>
+                            </div>
+                            <div class="d-flex align-items-center gap-2 mb-3 mb-lg-4">
+                                <img src="./assets/img/png/lock-icon.png" alt="">
+                                <p class="mb-0">Secure payment via PayPal & Credit Card</p>
+                            </div>
+                            <a href="" class="btn btn-primary w-100 mb-4">Add to Cart</a>
+                            <img style="max-width: 400px;" src="./assets/img/webp/payment-methods-group.webp" alt=""
+                                class="img-fluid mx-auto d-block">
+
+                            </ddiv>
+                        </div>
+                    </div>
+            </section>
+            <section class="default-sec pt-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="./assets/img/webp/products/product-single-dummy-gif.webp" alt="" class="img-fluid"
+                                style="width: 100%;">
+                        </div>
+                        <div class="col-lg-8">
+                            <p class="text-primary fw-bold fs-6 ">😍💥The thinnest, lightest, most convenient, and best
+                                shaving experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="">
+                                <img src="assets/img/png/trendyweeklogo.png" alt="" class="logo">
+                            </a>
+                            <ul class="contacts">
+                                <li class="list-item">
+                                    <a href="mailto:info@trendyweek.site">info@trendyweek.site</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="tel:#">+12 34567 899</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="#">600/D, Green road, NewYork</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-md-2">
+                            <h3 class="menu-title">Quick Menu</h3>
+                            <ul class="menus">
+                                <li class="list-item">
+                                    <a href="">Home</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="">Contact</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h3 class="menu-title">Useful Links</h3>
+                            <ul class="menus">
+                                <li class="list-item">
+                                    <a href="">Privacy Policy</a>
+                                </li>
+                                <li class="list-item">
+                                    <a href="">Terms of Use</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5">
+                            <h3 class="menu-title">Subscribe for newsletter</h3>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email address">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>©2023. Trendy Week. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header border-bottom">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">YOUR CART</h5>
+            <div></div>
+        </div>
+        <div class="offcanvas-body">
+            <p class="text-muted">Congratulations！You get free shipping！</p>
+            <div class="bg-light py-1 px-2 d-flex align-items-center gap-2 mb-4">
+                <img src="./assets/img/png/tag-icon.png" alt="">
+                <p class="text-muted mb-0">10% already! Buy 1 more item(s) and save 20%</p>
+            </div>
+            <ul class="products-list">
+                <li class="list-item">
+                    <img src="./assets/img/webp/products/product-single-dummy.webp" alt="" class="product-img">
+                    <div class="w-100">
+                        <h5 class="product-title">Crossbody Card Holder Phone Case for Samsung S/Note Series GreenS23 Ultra</h5>
+                        <p class="text text-muted">Blue</p>
+                        <div class="d-flex justify-content-between align-items-end mb-2">
+                            <input class="form-control shadow-none" type="number" value="1" style="max-width: 70px;">
+                            <div class="text-primary fs-6">$20.00</div>
+                        </div>
+                        <a href="" class="text-primary">Remove</a>
+                    
+                    </div>
+                </li>
+                <li class="list-item">
+                    <img src="./assets/img/webp/products/product-single-dummy.webp" alt="" class="product-img">
+                    <div class="w-100">
+                        <h5 class="product-title">Crossbody Card Holder Phone Case for Samsung S/Note Series GreenS23 Ultra</h5>
+                        <p class="text text-muted">Blue</p>
+                        <div class="d-flex justify-content-between align-items-end mb-2">
+                            <input class="form-control shadow-none" type="number" value="1" style="max-width: 70px;">
+                            <div class="text-primary fs-6">$20.00</div>
+                        </div>
+                        <a href="" class="text-primary">Remove</a>
+                    
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer p-3 shadow">
+            <div class="d-flex justify-content-between">
+                <h3 class="title">Subtotal</h3>
+                <h3 class="title text-primary">$50.00</h3>
+            </div>
+            <div class="d-flex justify-content-between">
+                <h3 class="title">Discount</h3>
+                <h3 class="title text-primary">$50.00</h3>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <h3 class="title">Total</h3>
+                <h3 class="title text-primary">$50.00</h3>
+            </div>
+            <p class="text-muted" style="font-size: 10px;">Taxes and shipping calculated at checkout</p>
+            <button class="btn btn-primary w-100">Checkout</button>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" id="productImgModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <button type="button" class="btn-close btn-primary"
+                    onclick="$('#productImgModal').modal('hide')"></button>
+                <div class="modal-body">
+                    <div class="img-wrapper">
+                        <img src="" alt="" class="single-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+</body>
+
+</html>

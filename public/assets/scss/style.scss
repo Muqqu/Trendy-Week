@@ -1,0 +1,879 @@
+$black: #000;
+$white: #fff;
+
+$primary: #53767c;
+$gray: #222222;
+
+body {
+    font-size: 14px;
+    font-family: 'Castoro', sans-serif;
+
+    .btn {
+        padding: 12px 24px;
+        border-radius: 0;
+        font-size: 16px;
+        transition: .3s;
+        position: relative;
+        z-index: 1;
+    }
+
+    .btn-primary {
+        border-color: $primary;
+        background-color: $primary;
+
+        &:hover {
+            border-color: $black;
+            background-color: $black;
+        }
+    }
+
+    .bg-primary {
+        background-color: $primary !important;
+    }
+
+    .text-primary {
+        color: $primary !important;
+    }
+
+    .input-wrapper {
+        margin-bottom: 12px;
+    }
+    .form-select,
+    .form-control {
+        border-radius: 0;
+        box-shadow: none;
+        &:focus {
+            box-shadow: none;
+            border-color: $primary;
+        }
+    }
+
+    .product-card {
+        border: none;
+        border-radius: 0;
+        text-decoration: none;
+
+        &:hover {
+            .card-img {
+                display: none;
+
+                &.card-img-2 {
+                    display: block;
+                }
+            }
+        }
+
+        .img-wrapper {
+            position: relative;
+
+            .add-to-card-btn {
+                position: absolute;
+                width: 100%;
+                padding: 10px;
+                background-color: rgba($primary, .6);
+                bottom: 0;
+                left: 0;
+                color: $white;
+                text-align: center;
+            }
+
+            .card-img {
+                border-radius: 0;
+            }
+
+            .card-img-2 {
+                display: none;
+            }
+        }
+
+        .tag {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: $primary;
+            top: 10px;
+            right: 10px;
+            color: $white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 50%;
+
+            .title {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+        }
+
+        .card-title {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .price {
+            color: $primary;
+            font-size: 16px;
+            text-align: center;
+
+            span {
+                color: $gray;
+            }
+        }
+    }
+
+    .breadcrumb {
+        .breadcrumb-item {
+            &.active {
+                font-size: 12px;
+            }
+
+            a {
+                display: block;
+                color: $primary;
+                text-decoration: none;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .pagination {
+        .page-item {
+            &.active {
+                .page-link {
+                    background-color: transparent;
+                    border-bottom: 4px solid $black;
+                }
+            }
+
+            .page-link {
+                color: $gray;
+                border: none;
+                border-radius: 0;
+                padding: 20px 30px;
+                font-size: 16px;
+            }
+        }
+    }
+
+    .products-list {
+        list-style-type: none;
+        padding: 0;
+        .list-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 12px;
+            padding: 10px;
+            background-color: rgba($primary, .06);
+            border-radius: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .product-img {
+                max-width: 80px;
+                width: 100%;
+                height: 80px;
+                object-fit: contain;
+                object-position: center;
+            }
+            .text {
+                font-size: 12px;
+                margin-bottom: 4px;
+            }
+            .product-title {
+                max-width: fit-content;
+                width: 200px;
+                font-size: 14px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+    }
+
+    .main {
+        .header {
+            background-color: $white;
+            border-bottom: 1px solid rgba($gray, .2);
+
+            .header-top {
+                background-color: $primary;
+                padding: 8px 0;
+                margin-top: 0;
+                transition: .3s;
+
+                .slick-slide {
+                    text-align: center;
+                    color: $white;
+                }
+
+                &.active {
+                    margin-top: -40px;
+                }
+            }
+
+            .navbar {
+                padding: 0;
+
+                .navbar-brand {
+                    img {
+                        width: 190px;
+                    }
+                }
+
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            font-size: 16px;
+                            padding: 10px 20px 18px;
+                            color: $black;
+                            font-weight: 500;
+                            position: relative;
+
+                            &:hover {
+                                color: $primary;
+
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                width: 0;
+                                height: 2px;
+                                background-color: $primary;
+                                transition: .3s;
+                            }
+
+                            &.active {
+                                color: $primary;
+
+                                &::before {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .main-content {
+            .default-sec {
+                padding: 60px 0;
+
+                .main-title {
+                    font-size: 24px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                    font-weight: 600;
+                    font-family: 'Crimson Text', sans-serif;
+                }
+            }
+
+            .hero-sec {
+                position: relative;
+
+                .bg {
+                    width: 100%;
+                }
+            }
+
+            .category-sec {
+                .card {
+                    border: none;
+                    text-decoration: none;
+
+                    &:hover {
+                        .card-img-wrapper {
+                            .card-img {
+                                transform: scale(1.06);
+                            }
+                        }
+                    }
+
+                    .card-img-wrapper {
+                        position: relative;
+                        z-index: 1;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgba($gray, .2);
+                            z-index: -1;
+                        }
+
+                        .card-img {
+                            border-radius: 0;
+                            transition: .2s;
+                        }
+                    }
+
+                    .card-body {
+                        padding: 18px 14px 4px;
+
+                        .card-title {
+                            font-size: 20px;
+                            color: $gray;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+
+            .simple-text {
+                text-align: center;
+
+                .text {
+                    font-size: 14px;
+                    font-family: 'Cardo', sans-serif;
+                }
+            }
+
+            .product-single-sec {
+                overflow: hidden;
+
+                .title {
+                    font-size: 24px;
+                    font-family: 'Crimson Text', sans-serif;
+                }
+
+                .price-title {
+                    font-size: 24px;
+                    color: $primary;
+
+                    &.text-decoration-line-through {
+                        color: $gray;
+                        font-size: 18px;
+                    }
+                }
+
+                .input-group {
+                    max-width: 160px;
+
+                    .form-control,
+                    .btn {
+                        padding: 10px;
+                        font-size: 18px;
+
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+
+                .variation-wrapper {
+                    .variation-title {
+                        font-size: 20px;
+                        font-family: 'Crimson Text', sans-serif;
+                    }
+
+                    .form-check {
+                        padding: 0;
+
+                        .form-check-input {
+                            display: none;
+
+                            &:checked+.form-check-label {
+                                border-color: $primary;
+                                background-color: $primary;
+                                color: $white;
+                            }
+                        }
+
+                        .form-check-label {
+                            border: 1px solid rgba($gray, .1);
+                            padding: 8px 20px;
+                            font-size: 14px;
+                            font-family: 'Crimson Text', sans-serif;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $primary;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+
+                .product-img-wrapper {
+                    background-color: rgba($gray, .04);
+                    padding: 20px;
+                    border-radius: 20px;
+
+                    img {
+                        width: 100%;
+                        max-height: 400px;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+
+                .product-slider-nav {
+                    .slider-item {
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            border-radius: 8px;
+                            margin: 0 5px;
+                            padding: 8px;
+                            background-color: rgba($gray, .04);
+                            max-height: 100px;
+                            min-height: 100px;
+                            width: 100%;
+                            object-fit: contain;
+                            object-position: center;
+                        }
+                    }
+
+                    .slick-dots {
+                        bottom: -30px;
+
+                        li {
+                            &.slick-active {
+                                button {
+                                    background-color: $primary;
+                                }
+                            }
+
+                            button {
+                                background-color: rgba($gray, .2);
+                                border-radius: 4px;
+                                width: 16px;
+                                height: 16px;
+
+                                &::before {
+                                    content: "";
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+
+            }
+
+            .order-track-sec {
+                .card {
+                    border-radius: 16px;
+                    .card-title {
+                        font-size: 22px;
+                    }
+                    .title {
+                        font-size: 18px;
+                    }
+
+                    .text {
+                        font-size: 14px;
+                    }
+
+                    a {
+                        color: $primary;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+
+            .checkout-sec {
+                padding: 40px 0;
+                position: relative;
+                background-color: rgba($gray, .04);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 53%;
+                    height: 100%;
+                    background-color: $white;
+                    z-index: 0;
+                    border-right: 1px solid rgba($gray, .2);
+                }
+
+                .title {
+                    font-size: 22px;
+                    color: $black;
+                    font-weight: 500;
+                    position: relative;
+                    z-index: 1;
+                }
+                p {
+                    position: relative;
+                    z-index: 1;
+                }
+                .subtitle {
+                    font-size: 16px;
+                    color: $black;
+                    font-weight: 500;
+                }
+
+                .input-wrapper {
+                    position: relative;
+                    width: 100%;
+
+                    &.active {
+                        .form-label {
+                            font-size: 10px;
+                            top: 4px;
+                        }
+
+                        .form-control {
+                            padding: 16px 16px 8px;
+                        }
+                    }
+
+                    .form-label {
+                        position: absolute;
+                        z-index: 1;
+                        left: 18px;
+                        top: 16px;
+                        color: $gray;
+                        font-size: 14px;
+                        transition: .3s;
+                        pointer-events: none;
+                    }
+
+                    .form-control {
+                        padding: 12px 16px;
+                        transition: .3s;
+                    }
+
+                    .form-select {
+                        padding: 12px 16px;
+                        box-shadow: none;
+                    }
+                }
+
+                .accordion {
+                    position: relative;
+                    z-index: 1;
+                    .accordion-header {
+                        .accordion-button {
+                            background-color: #f0f5ff;
+                            box-shadow: none;
+                            border: 1px solid #1773b0;
+                            input {
+                                margin: 0;
+                                pointer-events: none;
+                            }
+                            &:after {
+                                display: none;
+                            }
+
+                            &.collapsed {
+                                background-color: $white;
+                                border: 1px solid rgba($gray, .1);
+                            }
+                        }
+                    }
+                }
+
+
+                .order-summary-list {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+
+                    .list-item {
+                        margin-bottom: 12px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        img {
+                            width: 64px;
+                            height: 64px;
+                            object-fit: cover;
+                            border-radius: 4px;
+                            object-position: center;
+                            border: 1px solid rgba($gray, .2);
+                        }
+
+                        .title {
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+
+                        .price {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .total-title {
+                    font-size: 14px;
+                }
+            }
+
+            .cta-sec {
+                background-color: $primary;
+                .main-title {
+                    font-size: 30px;
+                    color: $white;
+                }
+                .btn {
+                    background-color: $white;
+                    max-width: fit-content;
+                    border: 2px solid $white;
+                    margin: 0 auto;
+                    display: block;
+                    color: $gray;
+                    text-align: center;
+                    &:hover {
+                        color: $white;
+                        background-color: $black;
+                        border-color: $black;
+                    }
+                }
+            }
+        }
+        .footer {
+            background-color: $gray;
+            color: $white;
+            .footer-top {
+                padding: 40px 0;
+
+                .logo {
+                    width: 100%;
+                    max-width: 160px;
+                    margin-bottom: 40px;
+                }
+
+                .menu-title {
+                    font-size: 24px;
+                    color: $white;
+                    margin-bottom: 20px;
+                }
+
+                .menus,
+                .contacts {
+                    list-style-type: none;
+                    padding: 0;
+
+                    .list-item {
+                        margin-bottom: 10px;
+
+                        a {
+                            color: $white;
+                            text-decoration: none;
+                            font-weight: 500;
+                            transition: .3s;
+                            display: block;
+
+                            &:hover {
+                                color: $primary;
+                            }
+                        }
+                    }
+                }
+            }
+            .footer-bottom {
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    .modal {
+        .modal-content {
+            border: none;
+            border-radius: 20px;
+
+            .btn-close {
+                opacity: 1;
+                border: none;
+                position: absolute;
+                right: -10px;
+                top: -10px;
+                z-index: 1;
+            }
+
+            .img-wrapper {
+                width: 100%;
+                height: 100%;
+                display: flex;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                    min-height: calc(100vh - 120px);
+                    max-height: calc(100vh - 120px);
+                }
+            }
+        }
+    }
+
+    .offcanvas {
+        .offcanvas-footer {
+            .title {
+                font-size: 18px;
+            }
+        }
+    }
+
+    @media (min-width: 991px) {
+        .container-fluid {
+            padding: 0 30px;
+            max-width: 1600px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .main {
+            .header {
+                .navbar {
+
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                font-size: 16px;
+                                padding: 10px 16px;
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                &.active {
+                                    color: $white;
+                                    background-color: $primary;
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .main-content {
+                overflow: hidden;
+                .default-sec {
+                    padding: 40px 0;
+                }
+                .checkout-sec {
+                    &::before {
+                        display: none;
+                    }
+
+                    .custom-card {
+                        padding: 12px 0;
+                        position: relative;
+                        margin-bottom: 20px;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            width: 110%;
+                            height: 100%;
+                            background-color: $white;
+                            transform: translate(-50%, 0);
+                            z-index: 0;
+                        }
+                    }
+                    .custom-accordion {
+                        .accordion-item {
+                            border: none;
+                        }
+                        .accordion-header {
+                            .accordion-button {
+                                background-color: $white;
+                                box-shadow: none;
+                                border: none;
+                                padding: 0;
+    
+                                &.collapsed {
+                                    background-color: $white;
+                                    border: none;
+    
+                                }
+                                .show-btn {
+                                    color: $primary;
+    
+                                }
+                            }
+                        }
+                        .accordion-body {
+                            padding: 12px 0 ;
+                        }
+                    }
+    
+                    .custom-accordion-2 {
+                        .accordion-item {
+                            background-color: transparent;
+                            .accordion-button {
+                                background-color: transparent;
+                                &.collapsed {
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .main {
+            .header {
+
+                .header-top {
+                    padding: 6px 0;
+
+                    .slick-slide {
+                        font-size: 14px;
+                    }
+                }
+
+                .navbar {
+                    .navbar-brand {
+                        img {
+                            width: 140px;
+                        }
+                    }
+
+                    .navbar-nav {
+                        .nav-item {
+                            .nav-link {
+                                font-size: 16px;
+                                padding: 10px 16px;
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                &.active {
+                                    color: $white;
+                                    background-color: $primary;
+                                    border-radius: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
